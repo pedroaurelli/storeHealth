@@ -1,0 +1,471 @@
+@import 'global.css';
+
+*{
+    font-family: 'Cabin', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+body{
+    background-color: var(--branco);
+    overflow: hidden;
+}
+
+header{
+    position: fixed;
+    left: 140px;
+    top: 30px;
+    z-index: 10000000;
+}
+
+h1{
+    font-weight: normal;
+}
+
+header div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--verdeEscuro);
+    font-weight:normal;
+    font-size: 15px;
+    gap: 8px;
+    
+}
+
+header div img{
+    height: 30px;
+    width: 30px;
+}
+
+
+.container-window{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+
+/* estilos login */
+
+.container-window-login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-window-login.absolute{
+    position: absolute;
+    animation: animacaoAbrir 0.7s forwards;
+}
+
+
+.container-login{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--branco);
+}
+
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login h2{
+    font-size: 50px;
+    font-weight: normal;
+    padding-bottom: 35px;
+    text-align: center;
+}
+
+
+input{
+    min-width: 590px;
+    height: 57px;
+    border: 4px solid var(--verdeEscuro);
+    border-radius: 10px;
+    padding: 0px 15px;
+    outline: none;
+    font-size: 20px;
+    margin: 13px 0px;
+    caret-color: var(--verdeEscuro);
+}
+
+.login input:last-of-type{
+    margin-bottom: 0px;
+}
+
+
+.login label{
+    width: 100%;
+    text-align: right;
+}
+
+.botao-padrao{
+    width: 252px;
+    height: 54px;
+    border-radius: 10px;
+    border: 4px solid var(--verdeEscuro);
+    background-color: var(--verdeEscuro);
+    color: white;
+    font-size: 25px;
+    margin: 45px 0px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.link-externo{
+    color: var(--verdeEscuro);
+}
+
+.botao-padrao:hover{
+    color: var(--verdeEscuro);
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+
+.entrar-com-redes h3{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.entrar-com-redes h3:last-child{
+    padding-top: 60px;
+}
+
+.redes-sociais{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.redes-sociais img{
+    width: 80px;
+}
+
+/* imagem login */
+
+.imagemLogin{
+    background-color: var(--verdeClaro);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagemLogin img{
+    min-width:200px ;
+    max-width: 900px;
+}
+/* fim estilos login */
+
+/* inicio estilos cadastro */
+
+
+.container-window-cadastro{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+
+.imagemCadastro{
+    width: 50%;
+    height: 100vh;
+    background-color: var(--verdeClaro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-cadastro{
+    width: 50%;
+    height: 100vh;
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+}
+
+.container-botao-voltar{
+    width: 100%;
+    padding: 30px 0px 0px 30px;
+}
+
+
+
+.container-formulario-cadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container-formulario-cadastro h2{
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.container-formulario-cadastro h3{
+    padding-bottom: 30px;
+}
+
+.container-formulario-cadastro input{
+    margin-top: 20px;
+    margin-bottom: 10px ;
+}
+
+.botaoVoltar{
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    background-color: var(--verdeEscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.input-checkbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.input-checkbox div{
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.input-checkbox input{
+    min-width: 30px;
+    margin: 0px;
+
+}
+/* animação de abrir e fechar a tela de cadastro */
+
+.container-window-cadastro.absolute{
+    display: flex;
+    animation: animacaoAbrir 0.7s forwards;
+}
+
+.container-window-cadastro.voltar{
+    animation: animacaoVoltar 2s forwards;
+}
+
+/* fim estilos cadastro */
+
+
+
+/* inicio estilos esqueci a senha */
+
+
+.container-esqueci-senha-PAI{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: none;
+}
+
+.container-esqueci-senha-PAI.esqueci-senha{
+    display: flex;
+    animation: animacaoSlide 0.7s forwards;
+
+}
+
+.container-esqueci-senha-PAI.voltar-esqueci-senha{
+    animation: animacaoSlideVoltar 1s forwards ;
+}
+
+
+@keyframes animacaoSlide{
+    from{
+        opacity: 1;
+        transform: translate3d(2000px,0, 0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+
+@keyframes animacaoSlideVoltar{
+    from{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(2000px,0,0);
+    }
+}
+
+.botaoVoltarRecuperarSenha{
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    background-color: var(--verdeEscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container-esqueci-senha{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--verdeClaro);
+
+}
+
+.div-recuperar-senha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+}
+
+.div-recuperar-senha h2{
+    font-size: 50px;
+    font-weight: normal;
+    padding-bottom: 14px;
+}
+
+.div-recuperar-senha h3{
+    font-size: 20px;
+    padding-bottom: 26px;
+}
+
+.div-recuperar-senha input{
+    margin-bottom: 30px;
+}
+
+
+.container-esqueci-senha-PAI.absolute{
+    display: flex;
+    animation: animacaoAbrir 1s forwards;
+}
+
+.container-esqueci-senha-PAI.voltar {
+    animation: animacaoVoltar 1s forwards;
+}
+
+
+/* fim estilos esqueci a senha */
+
+
+
+
+
+
+/* media queries */
+@media screen and (max-width: 1300px){
+    header{
+        top: 10px;
+        right: 1px;
+        left: 0px;
+    }
+    .container-cadastro{
+        width: 100%;
+    }
+    .imagemCadastro{
+        display: none;
+    }
+    .container-login{
+        width: 100%;
+    }
+    .imagemLogin{
+        display: none;
+    }
+}
+
+/* keyframes de animação */
+
+@keyframes animacaoAbrir{
+    from{
+        opacity: 1;
+        transform: translate3d(0, -2000px ,0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+@keyframes animacaoVoltar{
+    from{
+        opacity: 1;
+        transform: translate3d(0, 0 ,0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, -2000px,0);
+    }
+}
+
+
+@keyframes animacaoAbrirCima{
+    from{
+        opacity: 1;
+        transform: translate3d(0, 2000px ,0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+@keyframes animacaoVoltarCima{
+    from{
+        opacity: 1;
+        transform: translate3d(0, 0 ,0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, 2000px,0);
+    }
+}
