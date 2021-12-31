@@ -41,3 +41,45 @@
         opacity: 0;
     }
 }
+
+
+
+/* PARTE CADASTRO */
+
+.container-window-cadastro.abrirCadastro{
+    display: flex;
+    animation: abrirCadastro 1s forwards;
+}
+
+.container-window-cadastro.fecharCadastro{
+    display: flex;
+    animation: fecharCadastro 1s forwards;
+
+}
+
+@keyframes abrirCadastro{
+    from{
+        opacity: 1;
+        transform: translateX(-2000px);
+    }
+
+    to{
+        transform: translateX(0px);
+    }
+}
+
+
+@keyframes fecharCadastro{
+    from{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    70%{
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(-2000px);
+    }
+}

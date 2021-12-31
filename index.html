@@ -60,11 +60,14 @@
                     <div class="container-formulario-cadastro">
                         <h2>CRIE SUA CONTA</h2>
                         <h3>fácil, rapido e simples!</h3>
-                        <input type="text" class="input-cadastro" placeholder="Digite seu nome">
-                        <input type="text" class="input-cadastro" placeholder="Digite seu nome de usuário">
-                        <input type="email" class="input-cadastro" placeholder="Digite seu e-mail">
-                        <input type="password" class="input-cadastro" placeholder="Crie sua senha">
-                        <input type="password" class="input-cadastro" placeholder="Confirme sua senha">
+                        <form class="container-form">
+                            <input type="text" class="input-cadastro" placeholder="Digite seu nome">
+                            <input type="text" class="input-cadastro" placeholder="Digite seu nome de usuário">
+                            <input type="email" class="input-cadastro" placeholder="Digite seu e-mail">
+                            <input type="password" class="input-cadastro" placeholder="Crie sua senha">
+                            <input type="password" class="input-cadastro" placeholder="Confirme sua senha">
+                            <span class="senha-verificada"></span>
+                        </form>
 
                         <div class="input-checkbox">
                             <div>
@@ -96,7 +99,7 @@
             </div>
             <div class="div-recuperar-senha">
                 <h2>RECUPERAR SENHA</h2>
-                <h3>Digite seu email cadastrado. Vamos mandar um link de recuperação de senha para você!</h3>
+                <h3>Digite seu email cadastrado. Vamos enviar um link de recuperação de senha para você!</h3>
                 <span class="emailNaoValido"></span>
                 <form>
                     <input type="email" class="input-cadastro" placeholder="Digite seu e-mail">
@@ -122,6 +125,6 @@
 
 
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
