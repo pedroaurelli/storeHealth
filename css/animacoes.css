@@ -1,0 +1,43 @@
+.container-window{
+    overflow:hidden;
+}
+
+.container-esqueci-senha-PAI.fechar{
+    display: flex;
+    animation: fecharAnimacaoLado 1.2s forwards;
+    overflow:hidden;
+}
+
+.container-esqueci-senha-PAI.abrir{
+    display: flex;
+    animation: animacaoAbrirLado 0.7s forwards;
+}
+
+
+@keyframes animacaoAbrirLado{
+    from{
+        opacity: 1;
+        transform: translateY(-2000px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fecharAnimacaoLado{
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    70%{
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(-2000px);
+        opacity: 0;
+    }
+}

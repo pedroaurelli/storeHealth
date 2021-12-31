@@ -1,4 +1,5 @@
 @import 'global.css';
+@import 'animacoes.css';
 
 *{
     font-family: 'Cabin', sans-serif;
@@ -60,10 +61,6 @@ header div img{
     flex-direction: row;
 }
 
-.container-window-login.absolute{
-    position: absolute;
-    animation: animacaoAbrir 0.7s forwards;
-}
 
 
 .container-login{
@@ -276,16 +273,6 @@ input{
     margin: 0px;
 
 }
-/* animação de abrir e fechar a tela de cadastro */
-
-.container-window-cadastro.absolute{
-    display: flex;
-    animation: animacaoAbrir 0.7s forwards;
-}
-
-.container-window-cadastro.voltar{
-    animation: animacaoVoltar 2s forwards;
-}
 
 /* fim estilos cadastro */
 
@@ -299,43 +286,9 @@ input{
     height: 100vh;
     position: absolute;
     display: none;
+    overflow:hidden;
 }
 
-.container-esqueci-senha-PAI.esqueci-senha{
-    display: flex;
-    animation: animacaoSlide 0.7s forwards;
-
-}
-
-.container-esqueci-senha-PAI.voltar-esqueci-senha{
-    animation: animacaoSlideVoltar 1s forwards ;
-}
-
-
-@keyframes animacaoSlide{
-    from{
-        opacity: 1;
-        transform: translate3d(2000px,0, 0);
-    }
-
-    to{
-        opacity: 1;
-        transform: translate3d(0,0,0);
-    }
-}
-
-
-@keyframes animacaoSlideVoltar{
-    from{
-        opacity: 1;
-        transform: translate3d(0,0,0);
-    }
-
-    to{
-        opacity: 1;
-        transform: translate3d(2000px,0,0);
-    }
-}
 
 .botaoVoltarRecuperarSenha{
     width: 82px;
@@ -383,20 +336,16 @@ input{
 }
 
 
-.container-esqueci-senha-PAI.absolute{
-    display: flex;
-    animation: animacaoAbrir 1s forwards;
+.emailNaoValido{
+    color: red;
 }
 
-.container-esqueci-senha-PAI.voltar {
-    animation: animacaoVoltar 1s forwards;
+.emailNaoValido.valido{
+    color: var(--verdeEscuro);
 }
 
 
 /* fim estilos esqueci a senha */
-
-
-
 
 
 
@@ -444,53 +393,3 @@ input{
     }
 }
 
-/* keyframes de animação */
-
-@keyframes animacaoAbrir{
-    from{
-        opacity: 1;
-        transform: translate3d(0, -2000px ,0);
-    }
-
-    to{
-        opacity: 1;
-        transform: translate3d(0,0,0);
-    }
-}
-
-@keyframes animacaoVoltar{
-    from{
-        opacity: 1;
-        transform: translate3d(0, 0 ,0);
-    }
-
-    to{
-        opacity: 1;
-        transform: translate3d(0, -2000px,0);
-    }
-}
-
-
-@keyframes animacaoAbrirCima{
-    from{
-        opacity: 1;
-        transform: translate3d(0, 2000px ,0);
-    }
-
-    to{
-        opacity: 1;
-        transform: translate3d(0,0,0);
-    }
-}
-
-@keyframes animacaoVoltarCima{
-    from{
-        opacity: 1;
-        transform: translate3d(0, 0 ,0);
-    }
-
-    to{
-        opacity: 1;
-        transform: translate3d(0, 2000px,0);
-    }
-}

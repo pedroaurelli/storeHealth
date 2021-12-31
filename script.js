@@ -1,43 +1,64 @@
-const botaoCadastro = document.querySelector('#botaoCadastro')
-const botaoVoltar = document.querySelector('.botaoVoltar')
-const botaoVoltarRS = document.querySelector('.botaoVoltarRecuperarSenha')
-const botaoEsqueciSenha = document.querySelector('.link-esqueci-senha')
+//function esqueci a senha
 
-const containerCadastro = document.querySelector('.container-window-cadastro')
-const containerLogin = document.querySelector('.container-window-login')
-const containerRS = document.querySelector('.container-esqueci-senha-PAI')
+const btnEsqueciSenha = document.querySelector('.link-esqueci-senha')
+const containerSenha = document.querySelector('.container-esqueci-senha-PAI')
 
-
-//animar botoes cadastro
-
-function animarCadastro(){
-    containerCadastro.classList.remove('voltar')
-    containerCadastro.classList.add('absolute')
-    containerRS.classList.remove('esqueci-senha')
-    containerRS.classList.remove('voltar-esqueci-senha')
+function abrirEsqueciSenha(){
+    containerSenha.classList.toggle('abrir')
+    console.log(containerSenha.getBoundingClientRect(top))
 }
-botaoCadastro.addEventListener('click', animarCadastro)
+btnEsqueciSenha.addEventListener('click', abrirEsqueciSenha)
 
-function animarVoltar(){
-    containerCadastro.classList.add('voltar')
+
+const btnVoltarEsqcSenha = document.querySelector('.botaoVoltarRecuperarSenha')
+
+function fecharEsqueciSenha(){
+    
+    containerSenha.classList.toggle('abrir')
+    containerSenha.classList.add('fechar')
+
+    setTimeout(function(){
+        containerSenha.classList.remove('fechar', 'abrir')
+    },1000)
 }
-botaoVoltar.addEventListener('click', animarVoltar)
+
+btnVoltarEsqcSenha.addEventListener('click', fecharEsqueciSenha )
 
 
-//animar botoes esqueci a senha
-
-function entrarEsqueciSenha(){
-    containerRS.classList.add('esqueci-senha')
-    containerRS.classList.remove('voltar-esqueci-senha')
-    containerCadastro.classList.remove('voltar')
-    containerCadastro.classList.remove('absolute')
-}
-botaoEsqueciSenha.addEventListener('click', entrarEsqueciSenha)
 
 
-function voltarEsqueciSenha(){
-    containerRS.classList.add('voltar-esqueci-senha')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//function verificação email válido
+
+const spanNaoValido = document.querySelector('.emailNaoValido')
+const botaoAlert = document.querySelector('.botao-alert')
+
+function initAlert(){
+    const textoInput = document.forms[1].elements[0].value
+    const textoInputArray = new Array(textoInput)
+
+    if(textoInputArray[0].includes('@')){
+        spanNaoValido.innerHTML = `email enviado!`
+        spanNaoValido.classList.add('valido')
+    } else {
+        spanNaoValido.innerHTML = `o email '${document.forms[1].elements[0].value}' NÃO é válido`
+        spanNaoValido.classList.remove('valido')
+    }
     
 }
-botaoVoltarRS.addEventListener('click', voltarEsqueciSenha)
 
+
+botaoAlert.addEventListener('click', initAlert)
