@@ -211,6 +211,8 @@ input{
     background-color: var(--branco);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items:center ;
 }
 
 .container-botao-voltar{
@@ -405,6 +407,29 @@ input{
         right: 1px;
         left: 0px;
     }
+
+    .login input{
+        width: 700px;
+        height: 90px;
+        font-size: 40px;
+    }
+
+    .container-cadastro input{
+        width: 80%;
+        height: 90px;
+    }
+
+    .login h2, .container-cadastro h2, .container-esqueci-senha h2{
+        font-size: 100px;
+        text-align: center;
+    }
+
+    h3, label{
+        font-size: 40px;
+    }
+
+    
+
     .container-cadastro{
         width: 100%;
     }
