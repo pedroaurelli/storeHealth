@@ -19,7 +19,7 @@ function fecharCadastro(){
     containerCadastro.classList.toggle('abrirCadastro')
     containerCadastro.classList.add('fecharCadastro')
 
-    setTimeout(function(){
+    setTimeout(()=>{
         containerCadastro.classList.remove('fecharCadastro', 'abrirCadastro')
     },1000)
 }
