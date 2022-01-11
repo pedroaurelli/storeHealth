@@ -118,8 +118,8 @@ input{
 }
 
 .botao-padrao{
-    width: 252px;
-    height: 54px;
+    min-width: 590px;
+    height: 57px;
     border-radius: 10px;
     border: 4px solid var(--verdeEscuro);
     background-color: var(--verdeEscuro);
@@ -208,7 +208,7 @@ input{
     background-color: var(--branco);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items:center ;
 }
 
@@ -342,9 +342,6 @@ input.confirmar{
     padding-bottom: 26px;
 }
 
-.div-recuperar-senha input{
-    margin-bottom: 30px;
-}
 
 
 .emailNaoValido{
@@ -378,15 +375,17 @@ input.confirmar{
         left: 0px;
     }
 
-    .login input{
+    .login input, .container-cadastro input, .container-esqueci-senha input {
         width: 700px;
         height: 90px;
         font-size: 40px;
     }
 
-    .container-cadastro input{
-        width: 80%;
+
+    .botao-padrao{
+        width: 700px;
         height: 90px;
+
     }
 
     .login h2, .container-cadastro h2, .container-esqueci-senha h2{
@@ -394,11 +393,22 @@ input.confirmar{
         text-align: center;
     }
 
+    .container-esqueci-senha h3{
+        font-size: 37px;
+        text-align: center;
+    }
+
     h3, label{
         font-size: 40px;
     }
 
-    
+    .container-formulario-cadastro{
+        padding-top: 200px;
+    }
+
+    .input-checkbox{
+        padding: 20px 0px;
+    }
 
     .container-cadastro{
         width: 100%;
@@ -413,4 +423,5 @@ input.confirmar{
         display: none;
     }
 }
+
 
