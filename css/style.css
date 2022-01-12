@@ -9,6 +9,11 @@
     font-weight: normal;
 }
 
+::selection{
+    background-color: rgb(157, 255, 100);
+    color: white;
+}
+
 body{
     background-color: var(--branco);
     overflow: hidden;
@@ -141,6 +146,10 @@ input{
     transition: 0.3s;
 }
 
+.btnCadastro{
+    margin-top:10px ;
+}
+
 
 .entrar-com-redes h3{
     text-align: center;
@@ -233,7 +242,7 @@ input{
 }
 
 .container-formulario-cadastro h3{
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 .container-formulario-cadastro input{
@@ -283,6 +292,11 @@ input{
 
 input.confirmar{
     border: 4px solid red;
+}
+
+.verificacao{
+    text-align: center;
+    color: red;
 }
 
 /* fim estilos cadastro */
@@ -343,7 +357,6 @@ input.confirmar{
 }
 
 
-
 .emailNaoValido{
     color: red;
 }
@@ -352,8 +365,84 @@ input.confirmar{
     color: var(--verdeEscuro);
 }
 
+.input-cadastro.email-invalido{
+    border: 4px solid red;
+}
+
 
 /* fim estilos esqueci a senha */
+
+/* modal */
+.modal{
+    display: none;
+}
+
+.modal.concluido{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(8, 8, 8, 0.452);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-modal{
+    width: 400px;
+    height: 550px;
+    background-color: var(--branco);
+    border-radius: 10px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    border: 4px solid var(--verdeEscuro);
+    padding: 20px;
+ 
+
+}
+
+.card-modal.animacaoConcluido{
+    animation: animacaoModal 0.5s forwards;
+}
+
+.card-modal h2{
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.card-modal span{
+    font-size: 20px;
+    text-align: center;
+}
+
+.card-modal button{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--verdeEscuro);
+    color: white;
+    font-size: 35px;
+    border: 2px solid var(--verdeEscuro);
+}
+
+@keyframes animacaoModal{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 

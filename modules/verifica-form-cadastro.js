@@ -2,21 +2,116 @@ export default function verificaFormCadastro(){
 
 }
 
-const formulario = document.forms[1]
-const senha1 = formulario.elements[3]
-const senha2 = formulario.elements[4]
-const span = document.querySelector('.senha-verificada')
 
 
-setInterval(() => {
-    if(senha1.value !== senha2.value){
-        span.innerHTML = 'confirme sua senha corretamente'
-        senha2.classList.add('confirmar')
-    } else {
-        span.innerHTML = ''
-        senha2.classList.remove('confirmar')
-    }
-},2000);
+function verificarSenha(){
+
+    //campos obrigatórios
+
+        const formularioData = document.querySelectorAll('[data-cadastro="cadastro"]')
+        const arrayFormulario = new Array(formularioData)
+        const span = document.querySelector('.verificacao')
+
+        
+
+        arrayFormulario[0].forEach((item)=>{
+
+            if(item.value == ''){
+                item.classList.add('email-invalido')
+                span.innerHTML = 'campos obrigatórios *'
+
+            } else {
+                item.classList.remove('email-invalido')
+                span.innerHTML = ''
+            }
+
+                
+        })
+
+        // verificação de email
+
+        const input = document.forms[1].elements[2]
+        const inputEmail = document.forms[1].elements[2].value
+        const arrayEmail = new Array(inputEmail)
+            
+        
+        if(!arrayEmail[0].includes('@' && '.com')){
+            input.classList.add('email-invalido')
+            span.innerHTML += '<br>formato de email inválido'
+        } else {
+            input.classList.remove('email-invalido')
+        }
+
+        //verificação de senha
+
+        if((formularioData[3].value !== formularioData[4].value) || (formularioData[3].value == '')){
+            formularioData[4].classList.add('email-invalido')
+            span.innerHTML += '<br>confirme a senha corretamente'
+        } 
+
+        //verificação dos termos
+
+        const btnTermos = document.querySelector('.termos')
+
+        if(!btnTermos.checked){
+            span.innerHTML += '<br>concorde com os termos de uso *'
+        }
+
+        modal()
+
+        function modal(){
+            const modal = document.querySelector('.modal')
+            const cardModal = document.querySelector('.card-modal')
+            const spanNome = document.querySelector('[data-modal="nome"]')
+            const spanUsuario = document.querySelector('[data-modal="usuario"]')
+            const spanEmail = document.querySelector('[data-modal="email"]')
+            const btnModal = document.querySelector('.btnModal')
+
+            if(span.innerHTML == ''){
+                modal.classList.add('concluido')
+                cardModal.classList.add('animacaoConcluido')
+
+                spanNome.innerHTML = document.forms[1].elements[0].value
+                spanUsuario.innerHTML = document.forms[1].elements[1].value
+                spanEmail.innerHTML = document.forms[1].elements[2].value
+
+                function fecharModal(){
+                    modal.classList.remove('concluido')
+                    cardModal.classList.remove('animacaoConcluido')
+                }
+
+                btnModal.addEventListener('click', fecharModal)
+                modal.addEventListener('click', (item)=>{
+                    if(item.target == modal){
+                        modal.classList.remove('concluido')
+                        cardModal.classList.remove('animacaoConcluido')
+                    }
+                })
+                
+            }
+        }
+
+
+        
+
+
+
+
+
+
+} 
+
+
+
+
+
+const btnCadastro = document.querySelector('.btnCadastro')
+btnCadastro.addEventListener('click' , verificarSenha)
+
+
+
+
+
 
 
 

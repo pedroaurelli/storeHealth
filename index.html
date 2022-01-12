@@ -25,15 +25,15 @@
                         <input type="password" id="input-senha" placeholder="Senha">
                     </form>
                         
-                        <button type="submit" class="botao-padrao">ENTRAR</button>
+                        <button type="submit" class="botao-padrao" id="btn-entrar">ENTRAR</button>
 
                         <div class="entrar-com-redes">
-                            <h3>se preferir entre com:</h3>
+                            <!-- <h3>se preferir entre com:</h3>
                             <div class="redes-sociais">
                                 <a href="#"><img src="img/facebook.svg" alt="facebook"></a>
                                 <a href="#"><img src="img/google.svg" alt="google"></a>
                                 <a href="#"><img src="img/instagram.svg" alt="instagram"></a>
-                            </div>
+                            </div> -->
                             <h3>Não possui conta? <a href="#" class="link-externo" id="botaoCadastro">cadastre-se</a></h3>
                         </div>
                 </div>
@@ -59,20 +59,20 @@
                 
                     <div class="container-formulario-cadastro">
                         <h2>CRIE SUA CONTA</h2>
-                        <h3>fácil, rapido e simples!</h3>
+                        <h3>fácil, rápido e simples!</h3>
                         <form class="container-form">
-                            <input type="text" class="input-cadastro" placeholder="Digite seu nome">
-                            <input type="text" class="input-cadastro" placeholder="Digite seu nome de usuário">
-                            <input type="email" class="input-cadastro" placeholder="Digite seu e-mail">
-                            <input type="password" class="input-cadastro" placeholder="Crie sua senha">
-                            <input type="password" class="input-cadastro" placeholder="Confirme sua senha">
-                            <span class="senha-verificada"></span>
+                            <input type="text" class="input-cadastro" placeholder="Digite seu nome" data-cadastro="cadastro">
+                            <input type="text" class="input-cadastro" placeholder="Digite seu nome de usuário" data-cadastro="cadastro">
+                            <input type="email" class="input-cadastro inputEmailCadastro" placeholder="Digite seu e-mail" data-cadastro="cadastro">
+                            <input type="password" class="input-cadastro" placeholder="Crie sua senha" data-cadastro="cadastro">
+                            <input type="password" class="input-cadastro" placeholder="Confirme sua senha" data-cadastro="cadastro">
+                            <span class="verificacao"></span>
                         </form>
 
                         <div class="input-checkbox">
                             <div>
-                                <input type="checkbox" >
-                                <label>Concordo com os Termos, Política de Dados e Política de Cookies. </label>
+                                <input type="checkbox" class="termos" >
+                                <label>Concordo com os Termos, Política de Dados e Política de Cookies. *</label>
                             </div>
 
                             <div>
@@ -80,12 +80,27 @@
                                 <label>Desejo receber promoções e newsletter no email cadastrado.</label>
                             </div>
                         </div>
-                        <button type="submit" class="botao-padrao">CADASTRE-SE</button>
+                        <button type="submit" class="botao-padrao btnCadastro">CADASTRE-SE</button>
 
                     </div>
                     
 
             </section>
+
+            <!-- posição do modal -->
+            <section class="modal">
+                <div class="card-modal">
+                    <h2>SUA CONTA FOI CRIADA COM SUCESSO!</h2>
+                    <span data-modal="nome">Lorem</span>
+                    <span data-modal="usuario">teste</span>
+                    <span data-modal="email">email@gmail.com</span>
+
+                    <button class="btnModal">X</button>
+
+                </div>
+            </section>
+
+            
 
     </section>
 
@@ -110,10 +125,15 @@
             
 
         </section>
+
+        
         
     </section>
+
     
 </section>
+
+
 
     
 
