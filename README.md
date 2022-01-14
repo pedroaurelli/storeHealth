@@ -36,4 +36,4 @@ store.Health é uma loja ficticia, meu objetivo era fazer a parte de login, cada
 
 
 ## Conclusão do projeto
-### até agora (14/01/2022, data de publicação desse projeto no github) foi o projeto mais complexo que ja desenvolvi, aprendi muito com ele. Poderia consumir uma API de cadastro porém como estou praticando bastante Javascript para ter uma base sólida para começar a estudar um Framework, desenvolver o cadastro assim, do 0 foi muito bom para aperfeiçoar minha lógica e meus conhecimentos em tal linguagem! Espero que tenham gostado e se possivél deixe um 'Star ⭐' no projeto para me ajudar! Obrigado!
+#### até agora (14/01/2022, data de publicação desse projeto no github) foi o projeto mais complexo que ja desenvolvi, aprendi muito com ele. Poderia consumir uma API de cadastro porém como estou praticando bastante Javascript para ter uma base sólida para começar a estudar um Framework, desenvolver o cadastro assim, do 0 foi muito bom para aperfeiçoar minha lógica e meus conhecimentos em tal linguagem! Espero que tenham gostado e se possivél deixe um 'Star ⭐' no projeto para me ajudar! Obrigado!
