@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="img/logo-storeHealth.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <title>store.Health</title>
 </head>
@@ -61,12 +61,17 @@
                         <h2>CRIE SUA CONTA</h2>
                         <h3>fácil, rápido e simples!</h3>
                         <form class="container-form">
-                            <input type="text" class="input-cadastro" placeholder="Digite seu nome" data-cadastro="cadastro">
-                            <input type="text" class="input-cadastro" placeholder="Digite seu nome de usuário" data-cadastro="cadastro">
+                            <input type="text" class="input-cadastro input-nome-cadastro" placeholder="Digite seu nome" data-cadastro="cadastro">
+                            <input type="text" class="input-cadastro input-usuario-cadastro" placeholder="Digite seu nome de usuário" data-cadastro="cadastro">
                             <input type="email" class="input-cadastro inputEmailCadastro" placeholder="Digite seu e-mail" data-cadastro="cadastro">
                             <input type="password" class="input-cadastro" placeholder="Crie sua senha" data-cadastro="cadastro">
                             <input type="password" class="input-cadastro" placeholder="Confirme sua senha" data-cadastro="cadastro">
-                            <span class="verificacao"></span>
+                            <div class="container-spans">
+                                <span class="campo-obrigatorio"></span>
+                                <span class="valida-email"></span>
+                                <span class="verificacao"></span>
+                                <span class="senha-incorreta"></span>
+                            </div>
                         </form>
 
                         <div class="input-checkbox">

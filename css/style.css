@@ -357,6 +357,25 @@ input.confirmar{
 }
 
 
+
+
+.container-spans{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-spans span{
+    color: red;
+}
+
+
+
+
+
+
+
 .emailNaoValido{
     color: red;
 }

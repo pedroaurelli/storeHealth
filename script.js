@@ -4,8 +4,9 @@ import windowEsqueciSenha from "./modules/window-esqueciSenha.js"
 import verificaFormCadastro from "./modules/verifica-form-cadastro.js"
 import verificaLogin from "./modules/verifica-login.js"
 
-verificaFormCadastro();
+
 verificaEmail();
 windowCadastro();
 windowEsqueciSenha();
 verificaLogin();
+verificaFormCadastro()

@@ -23,6 +23,7 @@ function verificarSenha(){
             } else {
                 item.classList.remove('email-invalido')
                 span.innerHTML = ''
+                
             }
 
                 
@@ -47,7 +48,7 @@ function verificarSenha(){
         if((formularioData[3].value !== formularioData[4].value) || (formularioData[3].value == '')){
             formularioData[4].classList.add('email-invalido')
             span.innerHTML += '<br>confirme a senha corretamente'
-        } 
+        }
 
         //verificação dos termos
 
@@ -56,6 +57,11 @@ function verificarSenha(){
         if(!btnTermos.checked){
             span.innerHTML += '<br>concorde com os termos de uso *'
         }
+
+       
+
+        
+
 
         modal()
 
@@ -67,7 +73,13 @@ function verificarSenha(){
             const spanEmail = document.querySelector('[data-modal="email"]')
             const btnModal = document.querySelector('.btnModal')
 
-            if(span.innerHTML == ''){
+            const inputNomeUsuario = document.querySelector('.input-nome-cadastro')
+            const inputUsuario = document.querySelector('.input-usuario-cadastro')
+
+
+
+
+            if((span.innerHTML == '') && (!inputNomeUsuario.classList.contains('email-invalido')) && (!inputUsuario.classList.contains('email-invalido'))){
                 modal.classList.add('concluido')
                 cardModal.classList.add('animacaoConcluido')
 
